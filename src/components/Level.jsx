@@ -39,12 +39,12 @@ function BlockText({ position = [0, 0, 0], text = "Lorem ipsum", scale = 0.8 }) 
         fontWeight={800}
         letterSpacing={0.03}
         scale={scale}
-        position={[0, 1.3, 1.5]}
-        maxWidth={6}
+        position={[0, 1.75, 1.5]}
+        maxWidth={8}
         lineHeight={1.1}
         castShadow
-        rotation={[-0.2, 0, 0]}
-        textAlign="center"
+        rotation={[0, 0, 0]}
+        textAlign="left"
       >
         {text}
         <meshBasicMaterial toneMapped={false} />
@@ -114,32 +114,26 @@ function ColiderActivationVisibility({ setVisible }) {
 }
 
 function Level() {
-  const [isTimelineDataVisible, setIsTimelineDataVisible] = useState(false)
   return (
     <>
       <MusicPlayer />
       <InitialText />
-      <BlockText position={[0, 1.5, -36]} text="Calendario F1" scale={2.6} />
-
+      <BlockText position={[0, 3.5, -36]} text="Calendario F1" scale={3} />
       <FloorColider />
       <Road />
 
-      <ColiderActivationVisibility setVisible={setIsTimelineDataVisible} />
+      <Calendar />
 
-      {isTimelineDataVisible && <Calendar />}
-
-      {isTimelineDataVisible &&
-        timelineData.map((item) => (
-          <TimeLineItem
-            key={item.id}
-            circuit={item.date_circuit}
-            img={item.img}
-            img_x={item.x}
-            img_y={item.y}
-            position={[0, 1.35, -115 - item.id * 45]}
-          />
-        ))}
-
+      {timelineData.map((item) => (
+        <TimeLineItem
+          key={item.id}
+          circuit={item.date_circuit}
+          img={item.img}
+          img_x={item.x}
+          img_y={item.y}
+          position={[0, 1.35, -115 - item.id * 45]}
+        />
+      ))}
       <Trofeo />
     </>
   )

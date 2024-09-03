@@ -60,7 +60,7 @@ function Player() {
 
     // Camera
     // --------------------
-    console.log(playerPosition)
+    // console.log(playerPosition)
     // console.log(state.camera.position)
 
     const cameraPosition = new THREE.Vector3()

@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <KeyboardControls map={map}>
-        <Canvas shadows camera={{ fov: 45, near: 0.1, far: 200, position: [2.5, 4, 6] }}>
+        <Canvas shadows camera={{ fov: 45, near: 0.1, far: 700, position: [2.5, 4, 6] }}>
           <Suspense fallback={null}>
             {/* <OrbitControls /> */}
             <Environment background={false} files="/park.hdr" />

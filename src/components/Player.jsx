@@ -85,7 +85,7 @@ function Player() {
     if (playerPosition.z < -58 && playerPosition.z > -95) {
       cameraPosition.x += 2
       cameraPosition.z -= 1.25
-      cameraTarget.x += 4.3
+      cameraTarget.x += 4.6
       cameraTarget.z -= 1.15
       cameraTarget.y += 0.6
     }

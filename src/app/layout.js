@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Calendario F1 - 2024",
-  description: "Linea de tiempo con hitos del desarrollo de la psicología",
+  description: "Visualiza el calendario de F1 2024 en una experiencia web 3D interactiva",
   keywords: ["battaglia", "nicolas", "formula 1", "three", "fiber", "drei", "frontend"],
   creator: "Nicolas Battaglia",
 }
